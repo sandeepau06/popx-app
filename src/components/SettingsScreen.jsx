@@ -15,11 +15,12 @@ import { useState, useRef } from "react";
 import {
   phoneShell, textDark, textGray, borderColor, purple, btnSecondary,
 } from "../styles/tokens";
+import defaultProfilePic from "../img/avatar.png";
 
 export default function SettingsScreen({ navigate }) {
   // Holds the currently displayed profile picture.
   // Starts out pointing at the default placeholder photo on disk.
-  const [profilePic, setProfilePic] = useState("./src/img/avatar.png");
+  const [profilePic, setProfilePic] = useState(defaultProfilePic);
 
   // Ref used to programmatically trigger the hidden <input type="file">
   // when the user clicks the camera badge (since native file inputs are ugly by default)
